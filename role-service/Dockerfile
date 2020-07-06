@@ -3,7 +3,7 @@ from bryandollery/maven-repo as build
 
 arg rebuile 
 #
-Copy files
+#Copy files
 #
 COPY src /home/app/src
 COPY pom.xml /home/app
