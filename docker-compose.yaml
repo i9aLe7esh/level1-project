@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  department-service:
+    container_name: department-container
+    image: bhanbashi/department-service
+    build: ./department-service
+    ports:
+      - "8083:80"
+  project-assessment-site:
+    container_name: project-assessment-site
+    image: bhanbashi/project-assessment-site/public
+    build: ./project-assessment-site/public
+    ports: 
+      - "80:80"
