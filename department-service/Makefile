@@ -1,8 +1,8 @@
 build:
-	DOCKER_BUILDKIT=1 docker build -t department-service:v1 .
+	DOCKER_BUILDKIT=1 docker build -t department-service:latest .
 
 run:
-	docker run --name department-container -d -p 8083:80 department-service:v1
+	docker run --name department-container -d -p 8083:80 department-service:latest
 
 join:
 	docker exec -it department-container sh
