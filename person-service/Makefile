@@ -1,19 +1,19 @@
 build:
-	 docker build -t person-service:v1 .
+	 docker build -t person-service:latest .
 run:
-	docker run --name person-container -d -p 8081:80 person-service:v1
+	docker run --name person-container -d -p 8081:80 person-service:latest
 
 join:
-	docker exec -it person-container:v1 sh
+	docker exec -it person-container sh
 
 logs:
-	docker logs person-container:v1
+	docker logs person-container
 
 follow:
-	docker logs -f person-container:v1
+	docker logs -f person-container
 
 stop:
-	docker stop person-container:v1
+	docker stop person-container
 
 clean:
-	docker rm person-container:v1
+	docker rm person-container
