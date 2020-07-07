@@ -1,7 +1,7 @@
 build:
-	docker build -t role-service:v1 .
+	docker build -t role-service:latest .
 run:
-	docker run --name role-container -d -p 8082:80 role-service:v1
+	docker run --name role-container -d -p 8082:80 role-service:latest
 
 join:
 	docker exec -it role-container sh
