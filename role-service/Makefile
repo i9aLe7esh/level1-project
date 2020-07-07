@@ -1,5 +1,5 @@
 build:
-	docker build -t role-service:latest .
+	DOCKER_BUILDKIT=1 docker build -t role-service:latest .
 run:
 	docker run --name role-container -d -p 8082:80 role-service:latest
 
